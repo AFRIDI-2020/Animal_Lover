@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "732881780903",
+    "project_id": "animal-society-21",
+    "storage_bucket": "animal-society-21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732881780903:android:cc5beedca9ab3521d9db82",
+        "android_client_info": {
+          "package_name": "com.example.pet_lover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732881780903-b4biu4bl98uq4oaebodunr21gj6374gq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuY_TCfl4EeOOTsgvDM4-xqgOi3KFtPMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732881780903-b4biu4bl98uq4oaebodunr21gj6374gq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
