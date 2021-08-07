@@ -4,7 +4,11 @@ import 'package:pet_lover/navigation_bar_screens/account_nav.dart';
 import 'package:pet_lover/navigation_bar_screens/chat_nav.dart';
 import 'package:pet_lover/navigation_bar_screens/following_nav.dart';
 import 'package:pet_lover/navigation_bar_screens/home_nav.dart';
+import 'package:pet_lover/provider/userProvider.dart';
 import 'package:pet_lover/sub_screens/search.dart';
+import 'package:provider/provider.dart';
+
+import 'demo_designs/profile_options.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -25,18 +29,125 @@ class _HomeState extends State<Home> {
 
   var _pageController = PageController();
 
+  GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey();
+  Map<String, String> _currentUserInfo = {};
+  int _count = 0;
+  String _userProfileImage = '';
+  String _username = '';
+  String _finalUsername = '';
+  String _mobileNo = '';
+
+  _customInit(UserProvider userProvider) async {
+    setState(() {
+      _count++;
+    });
+    await userProvider.getCurrentUserInfo().then((value) {
+      setState(() {
+        _currentUserInfo = userProvider.currentUserMap;
+        _userProfileImage = _currentUserInfo['profileImageLink']!;
+        _username = _currentUserInfo['username']!;
+
+        if (_username.length > 11) {
+          _finalUsername = '${_username.substring(0, 11)}...';
+        } else {
+          _finalUsername = _username;
+        }
+
+        _mobileNo = _currentUserInfo['mobileNo']!;
+      });
+    });
+  }
+
+  // Future<bool> _onBackPressed() async {
+  //   return (await showDialog(
+  //           context: context,
+  //           builder: (context) => AlertDialog(
+  //                 title: Text('Do you really want to exit?'),
+  //                 actions: [
+  //                   TextButton(
+  //                     onPressed: () => Navigator.pop(context, false),
+  //                     child: Text('No'),
+  //                   ),
+  //                   TextButton(
+  //                     onPressed: () => Navigator.pop(context, true),
+  //                     child: Text('Yes'),
+  //                   )
+  //                 ],
+  //               ))) ??
+  //       false;
+  // }
+
   @override
   Widget build(BuildContext context) {
+    final UserProvider userProvider = Provider.of<UserProvider>(context);
+    if (_count == 0) _customInit(userProvider);
+    Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
         resizeToAvoidBottomInset: false,
-        appBar: AppBar(
-          title: Transform(
-            transform: Matrix4.translationValues(-50.0, 0.0, 0.0),
-            child:
-                _currentIndex == 0 ? searchBar(context) : appBarTitle(context),
+        key: _scaffoldKey,
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(
+                  decoration: BoxDecoration(
+                    color: Colors.deepOrange,
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        radius: size.width * .08,
+                        backgroundImage: _currentUserInfo == ''
+                            ? AssetImage('assets/profile_image_demo.png')
+                            : NetworkImage(_userProfileImage) as ImageProvider,
+                      ),
+                      SizedBox(width: size.width * .04),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            _finalUsername,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: size.width * .06,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Text(
+                            _mobileNo,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: size.width * .04,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  )),
+              ProfileOption().showOption(context, 'Update account'),
+              ProfileOption().showOption(context, 'Reset password'),
+              ProfileOption().showOption(context, 'Logout'),
+            ],
           ),
+        ),
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(
+              Icons.menu,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              if (_scaffoldKey.currentState!.isDrawerOpen) {
+                _scaffoldKey.currentState!.openEndDrawer();
+              } else {
+                _scaffoldKey.currentState!.openDrawer();
+              }
+            },
+          ),
+          title: _currentIndex == 0 ? searchBar(context) : appBarTitle(context),
           backgroundColor: Colors.white,
           elevation: 0,
         ),

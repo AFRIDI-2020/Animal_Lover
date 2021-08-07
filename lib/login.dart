@@ -280,8 +280,11 @@ class _LoginState extends State<Login> {
           true) {
         final prefs = await SharedPreferences.getInstance();
         prefs.setString('mobileNo', _mobileNoController.text);
+        Navigator.pop(context);
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => Home()));
+        // Navigator.pushAndRemoveUntil(context,
+        //     MaterialPageRoute(builder: (context) => Home()), (route) => false);
       } else {
         print('Not registered yet!');
         Navigator.pop(context);
