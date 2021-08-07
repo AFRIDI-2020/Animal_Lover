@@ -34,8 +34,6 @@ class _GroupPostAddState extends State<GroupPostAdd> {
   TextEditingController _genderController = TextEditingController();
   TextEditingController _ageController = TextEditingController();
 
-  // File? _file;
-
   File? fileMedia;
 
   File? _image;
@@ -62,12 +60,12 @@ class _GroupPostAddState extends State<GroupPostAdd> {
     return _currentMobileNo;
   }
 
-  @override
-  void dispose() {
-    controller?.dispose();
+  // @override
+  // void dispose() {
+  //   controller?.dispose();
 
-    super.dispose();
-  }
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -144,18 +142,6 @@ class _GroupPostAddState extends State<GroupPostAdd> {
 
                                 _cameraGalleryBottomSheet(context, source);
                               });
-
-                              // final file = await pickVideoFile();
-                              // controller = VideoPlayerController.file(file)
-                              //   ..addListener(() => setState(() {}))
-                              //   ..setLooping(true)
-                              //   ..initialize().then((_) {
-                              //     controller!.play();
-                              //     setState(() {
-                              //       _file = file;
-                              //       _image = null;
-                              //     });
-                              //   });
                             },
                             child: Icon(
                               Icons.video_camera_front,
@@ -612,7 +598,7 @@ class _GroupPostAddState extends State<GroupPostAdd> {
                       source == 'Photo' ? _getCameraImage() : _getCameraVideo();
 
                       Navigator.pop(context);
-                      controller!.dispose();
+                      controller != null ? controller!.dispose() : true;
                     },
                   ),
                   ListTile(
@@ -625,7 +611,7 @@ class _GroupPostAddState extends State<GroupPostAdd> {
                           ? _getGalleryImage()
                           : _getGalleryVideo();
                       Navigator.pop(context);
-                      controller!.dispose();
+                      controller != null ? controller!.dispose() : true;
                     },
                   )
                 ],
@@ -676,6 +662,8 @@ class _GroupPostAddState extends State<GroupPostAdd> {
           fileMedia = file;
         });
       });
+
+    //controller!.dispose();
   }
 
   Future _getCameraImage() async {
@@ -703,7 +691,7 @@ class _GroupPostAddState extends State<GroupPostAdd> {
   Future _getCameraVideo() async {
     setState(() {
       this.fileMedia = null;
-      //   controller!.dispose();
+
       _image = null;
     });
     final getMedia = ImagePicker().getVideo;

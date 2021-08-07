@@ -499,7 +499,7 @@ class GroupProvider extends ChangeNotifier {
         );
         _groupPostList.add(groupPost);
       });
-      return _groupPostList;
+      return groupPostList;
     } catch (error) {
       print('Error: $error');
       return [];

@@ -115,26 +115,28 @@ class _AnimalPostState extends State<AnimalPost> {
 
   Widget? videoStatusAnimation;
   @override
+  void dispose() {
+    controller!.dispose();
+    super.dispose();
+  }
+
+  @override
   void initState() {
     super.initState();
 
     controller = VideoPlayerController.network(petVideo)
-      ..addListener(() => setState(() {}))
+      ..addListener(() => mounted ? setState(() {}) : true)
       ..setLooping(true)
       ..initialize().then((_) => controller!.play());
   }
 
-  // @override
-  // void dispose() {
-  //   controller!.dispose();
-  //   super.dispose();
-  // }
-
   Future<void> _customInit(
       UserProvider userProvider, AnimalProvider animalProvider) async {
-    setState(() {
-      count++;
-    });
+    if (mounted) {
+      setState(() {
+        count++;
+      });
+    }
 
     await userProvider.getCurrentUserInfo().then((value) {
       Map userInfo = userProvider.currentUserMap;
@@ -299,7 +301,7 @@ class _AnimalPostState extends State<AnimalPost> {
                               ))
                             ],
                           )
-                        : Container(),
+                        : CircularProgressIndicator(),
                   )),
         Row(
           children: [

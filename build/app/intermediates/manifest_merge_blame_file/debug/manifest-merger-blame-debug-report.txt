@@ -12,23 +12,23 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->E:\Flutter Projects\Animal_Lover\android\app\src\debug\AndroidManifest.xml:6:5-66
-14-->E:\Flutter Projects\Animal_Lover\android\app\src\debug\AndroidManifest.xml:6:22-64
+14-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\debug\AndroidManifest.xml:6:5-66
+14-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\debug\AndroidManifest.xml:6:22-64
 15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-15-->[:file_picker] E:\Flutter Projects\Animal_Lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
-15-->[:file_picker] E:\Flutter Projects\Animal_Lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
+15-->[:file_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
+15-->[:file_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
 16
 17    <queries>
-17-->[:file_picker] E:\Flutter Projects\Animal_Lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-15:15
+17-->[:file_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-15:15
 18        <intent>
-18-->[:file_picker] E:\Flutter Projects\Animal_Lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-14:18
+18-->[:file_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-14:18
 19            <action android:name="android.intent.action.GET_CONTENT" />
-19-->[:file_picker] E:\Flutter Projects\Animal_Lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-72
-19-->[:file_picker] E:\Flutter Projects\Animal_Lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:21-69
+19-->[:file_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-72
+19-->[:file_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:21-69
 20
 21            <data android:mimeType="*/*" />
-21-->[:file_picker] E:\Flutter Projects\Animal_Lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
-21-->[:file_picker] E:\Flutter Projects\Animal_Lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
+21-->[:file_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+21-->[:file_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
 22        </intent>
 23    </queries> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 24    <!-- <uses-sdk android:minSdkVersion="14" /> -->
@@ -37,29 +37,29 @@
 25-->[com.google.firebase:firebase-firestore:23.0.1] C:\Users\CDS\.gradle\caches\transforms-2\files-2.1\cbb4dd00a77ee30c7ef3a16d677c1603\jetified-firebase-firestore-23.0.1\AndroidManifest.xml:13:22-76
 26
 27    <application
-27-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:3:4-45:19
+27-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:3:4-45:19
 28        android:name="androidx.multidex.MultiDexApplication"
 29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 29-->[androidx.core:core:1.5.0] C:\Users\CDS\.gradle\caches\transforms-2\files-2.1\196e05255dea385cbe02fa287f384c72\core-1.5.0\AndroidManifest.xml:24:18-86
 30        android:debuggable="true"
 31        android:icon="@mipmap/ic_launcher"
-31-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:5:9-43
+31-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:5:9-43
 32        android:label="pet_lover" >
-32-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:4:9-34
+32-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:4:9-34
 33        <activity
-33-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:6:9-34:20
+33-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:6:9-34:20
 34            android:name="com.example.pet_lover.MainActivity"
-34-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:7:13-41
+34-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:7:13-41
 35            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-35-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:10:13-163
+35-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:10:13-163
 36            android:hardwareAccelerated="true"
-36-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:11:13-47
+36-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:11:13-47
 37            android:launchMode="singleTop"
-37-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:8:13-43
+37-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:8:13-43
 38            android:theme="@style/LaunchTheme"
-38-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:9:13-47
+38-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:9:13-47
 39            android:windowSoftInputMode="adjustResize" >
-39-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:12:13-55
+39-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:12:13-55
 40
 41            <!--
 42                 Specifies an Android theme to apply to this Activity as soon as
@@ -68,11 +68,11 @@
 45                 to determine the Window background behind the Flutter UI.
 46            -->
 47            <meta-data
-47-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:17:13-20:17
+47-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:17:13-20:17
 48                android:name="io.flutter.embedding.android.NormalTheme"
-48-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:18:15-70
+48-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:18:15-70
 49                android:resource="@style/NormalTheme" />
-49-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:19:15-52
+49-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:19:15-52
 50            <!--
 51                 Displays an Android View that continues showing the launch screen
 52                 Drawable until Flutter paints its first frame, then this splash
@@ -81,69 +81,69 @@
 55                 Flutter's first frame.
 56            -->
 57            <meta-data
-57-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:26:13-29:17
+57-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:26:13-29:17
 58                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-58-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:27:15-79
+58-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:27:15-79
 59                android:resource="@drawable/launch_background" />
-59-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:28:15-61
+59-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:28:15-61
 60
 61            <intent-filter>
-61-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:30:13-33:29
+61-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:30:13-33:29
 62                <action android:name="android.intent.action.MAIN" />
-62-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:31:17-68
-62-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:31:25-66
+62-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:31:17-68
+62-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:31:25-66
 63
 64                <category android:name="android.intent.category.LAUNCHER" />
-64-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:32:17-76
-64-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:32:27-74
+64-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:32:17-76
+64-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:32:27-74
 65            </intent-filter>
 66        </activity>
 67        <activity
-67-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:35:9-38:63
+67-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:35:9-38:63
 68            android:name="com.yalantis.ucrop.UCropActivity"
-68-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:36:5-52
+68-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:36:5-52
 69            android:screenOrientation="portrait"
-69-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:37:5-41
+69-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:37:5-41
 70            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-70-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:38:5-61
+70-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:38:5-61
 71
 72        <!--
 73             Don't delete the meta-data below.
 74             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
 75        -->
 76        <meta-data
-76-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:42:9-44:33
+76-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:42:9-44:33
 77            android:name="flutterEmbedding"
-77-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:43:13-44
+77-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:43:13-44
 78            android:value="2" />
-78-->E:\Flutter Projects\Animal_Lover\android\app\src\main\AndroidManifest.xml:44:13-30
+78-->C:\Users\CDS\Desktop\Afridi Latest\pet_lover\android\app\src\main\AndroidManifest.xml:44:13-30
 79
 80        <service
-80-->[:firebase_storage] E:\Flutter Projects\Animal_Lover\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+80-->[:firebase_storage] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 81            android:name="com.google.firebase.components.ComponentDiscoveryService"
-81-->[:firebase_storage] E:\Flutter Projects\Animal_Lover\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
+81-->[:firebase_storage] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
 82            android:directBootAware="true"
 82-->[com.google.firebase:firebase-common:20.0.0] C:\Users\CDS\.gradle\caches\transforms-2\files-2.1\dd3c2617c0f6359f3b13e51ce6c2db19\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
 83            android:exported="false" >
 83-->[com.google.firebase:firebase-firestore:23.0.1] C:\Users\CDS\.gradle\caches\transforms-2\files-2.1\cbb4dd00a77ee30c7ef3a16d677c1603\jetified-firebase-firestore-23.0.1\AndroidManifest.xml:19:13-37
 84            <meta-data
-84-->[:firebase_storage] E:\Flutter Projects\Animal_Lover\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+84-->[:firebase_storage] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 85                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
-85-->[:firebase_storage] E:\Flutter Projects\Animal_Lover\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-126
+85-->[:firebase_storage] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-126
 86                android:value="com.google.firebase.components.ComponentRegistrar" />
-86-->[:firebase_storage] E:\Flutter Projects\Animal_Lover\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+86-->[:firebase_storage] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 87            <meta-data
-87-->[:cloud_firestore] E:\Flutter Projects\Animal_Lover\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+87-->[:cloud_firestore] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 88                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-88-->[:cloud_firestore] E:\Flutter Projects\Animal_Lover\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
+88-->[:cloud_firestore] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
 89                android:value="com.google.firebase.components.ComponentRegistrar" />
-89-->[:cloud_firestore] E:\Flutter Projects\Animal_Lover\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+89-->[:cloud_firestore] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 90            <meta-data
-90-->[:firebase_core] E:\Flutter Projects\Animal_Lover\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+90-->[:firebase_core] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 91                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-91-->[:firebase_core] E:\Flutter Projects\Animal_Lover\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+91-->[:firebase_core] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
 92                android:value="com.google.firebase.components.ComponentRegistrar" />
-92-->[:firebase_core] E:\Flutter Projects\Animal_Lover\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+92-->[:firebase_core] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 93            <meta-data
 93-->[com.google.firebase:firebase-firestore:23.0.1] C:\Users\CDS\.gradle\caches\transforms-2\files-2.1\cbb4dd00a77ee30c7ef3a16d677c1603\jetified-firebase-firestore-23.0.1\AndroidManifest.xml:20:13-22:85
 94                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
@@ -159,21 +159,21 @@
 99        </service>
 100
 101        <provider
-101-->[:image_picker] E:\Flutter Projects\Animal_Lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
+101-->[:image_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
 102            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-102-->[:image_picker] E:\Flutter Projects\Animal_Lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-82
+102-->[:image_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-82
 103            android:authorities="com.example.pet_lover.flutter.image_provider"
-103-->[:image_picker] E:\Flutter Projects\Animal_Lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-74
+103-->[:image_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-74
 104            android:exported="false"
-104-->[:image_picker] E:\Flutter Projects\Animal_Lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
+104-->[:image_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
 105            android:grantUriPermissions="true" >
-105-->[:image_picker] E:\Flutter Projects\Animal_Lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
+105-->[:image_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
 106            <meta-data
-106-->[:image_picker] E:\Flutter Projects\Animal_Lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:75
+106-->[:image_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:75
 107                android:name="android.support.FILE_PROVIDER_PATHS"
-107-->[:image_picker] E:\Flutter Projects\Animal_Lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
+107-->[:image_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
 108                android:resource="@xml/flutter_image_picker_file_paths" />
-108-->[:image_picker] E:\Flutter Projects\Animal_Lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
+108-->[:image_picker] C:\Users\CDS\Desktop\Afridi Latest\pet_lover\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
 109        </provider>
 110        <provider
 110-->[com.google.firebase:firebase-common:20.0.0] C:\Users\CDS\.gradle\caches\transforms-2\files-2.1\dd3c2617c0f6359f3b13e51ce6c2db19\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39

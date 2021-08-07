@@ -63,19 +63,21 @@ class _AddAnimalState extends State<AddAnimal> {
     return _currentMobileNo;
   }
 
+  Future _customInit(AnimalProvider animalProvider) async {
+    if (this.mounted) {
+      setState(() {
+        _count++;
+      });
+      _getPetInfo(animalProvider);
+    }
+  }
+
   // @override
   // void dispose() {
   //   controller?.dispose();
 
   //   super.dispose();
   // }
-
-  Future _customInit(AnimalProvider animalProvider) async {
-    setState(() {
-      _count++;
-      _getPetInfo(animalProvider);
-    });
-  }
 
   _getPetInfo(AnimalProvider animalProvider) async {
     if (petId != '') {
@@ -565,7 +567,7 @@ class _AddAnimalState extends State<AddAnimal> {
                       source == 'Photo' ? _getCameraImage() : _getCameraVideo();
 
                       Navigator.pop(context);
-                      controller!.dispose();
+                      controller != null ? controller!.dispose() : true;
                     },
                   ),
                   ListTile(
@@ -578,7 +580,8 @@ class _AddAnimalState extends State<AddAnimal> {
                           ? _getGalleryImage()
                           : _getGalleryVideo();
                       Navigator.pop(context);
-                      controller!.dispose();
+                      controller != null ? controller!.dispose() : true;
+                      // controller!.dispose();
                     },
                   )
                 ],
@@ -608,6 +611,7 @@ class _AddAnimalState extends State<AddAnimal> {
           )).then((value) {
         setState(() {
           _image = value;
+          fileMedia = null;
         });
       });
     }

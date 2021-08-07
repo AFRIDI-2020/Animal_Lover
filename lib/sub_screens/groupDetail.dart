@@ -83,9 +83,9 @@ class _GroupDetailState extends State<GroupDetail> {
   Future _onRefresh(
       UserProvider userProvider, GroupProvider groupProvider) async {
     await groupProvider.getGroupPost(3, groupId).then((value) {
-      // _groupPostLists.clear();
-
       setState(() {
+        //  _groupPostLists.clear();
+
         _groupPostLists = groupProvider.groupPostList;
       });
     });
@@ -318,26 +318,22 @@ class _GroupDetailState extends State<GroupDetail> {
                           builder: (context) => GroupPostAdd(groupId: groupId)),
                     );
                   },
-                  child: Expanded(
-                    child: Padding(
-                      padding: EdgeInsets.only(left: size.width * .04),
-                      child: Container(
-                        padding: EdgeInsets.fromLTRB(
-                            size.width * .03,
-                            size.width * .02,
-                            size.width * .03,
-                            size.width * .02),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(size.width * .04),
-                          border: Border.all(color: Colors.black),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            'Write something...',
-                            style: TextStyle(
-                              fontSize: size.width * .035,
-                            ),
+                  child: Padding(
+                    padding: EdgeInsets.only(left: size.width * .04),
+                    child: Container(
+                      width: size.width * .73,
+                      padding: EdgeInsets.fromLTRB(size.width * .03,
+                          size.width * .02, size.width * .03, size.width * .02),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(size.width * .04),
+                        border: Border.all(color: Colors.black),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Write something...',
+                          style: TextStyle(
+                            fontSize: size.width * .035,
                           ),
                         ),
                       ),

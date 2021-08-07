@@ -120,11 +120,34 @@ class _GroupAnimalPostState extends State<GroupAnimalPost> {
   int _numberOfComments = 0;
   int _numberOfShares = 0;
 
+  VideoPlayerController? controller;
+
+  bool isVisible = true;
+
+  Widget? videoStatusAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    controller = VideoPlayerController.network(petVideo)
+      ..addListener(() => mounted ? setState(() {}) : true)
+      ..setLooping(true)
+      ..initialize().then((_) => controller!.play());
+  }
+
   Future<void> _customInit(
       UserProvider userProvider, AnimalProvider animalProvider) async {
-    setState(() {
-      count++;
-    });
+    if (mounted) {
+      setState(() {
+        count++;
+      });
+    }
+    @override
+    void dispose() {
+      super.dispose();
+      controller!.dispose();
+    }
 
     await userProvider.getCurrentUserInfo().then((value) {
       Map userInfo = userProvider.currentUserMap;
@@ -152,52 +175,39 @@ class _GroupAnimalPostState extends State<GroupAnimalPost> {
 
   _getFollowersNumber(AnimalProvider animalProvider, String _animalId) async {
     await animalProvider.getNumberOfFollowers(_animalId).then((value) {
-      setState(() {
-        _numberOfFollowers = animalProvider.numberOfFollowers;
-      });
+      if (mounted) {
+        setState(() {
+          _numberOfFollowers = animalProvider.numberOfFollowers;
+        });
+      }
+
       print('$petId has $_numberOfFollowers followers');
     });
   }
 
   _getSharesNumber(AnimalProvider animalProvider, String _animalId) async {
     await animalProvider.getNumberOfShares(_animalId).then((value) {
-      setState(() {
-        _numberOfShares = animalProvider.numberOfShares;
-      });
+      if (mounted) {
+        setState(() {
+          _numberOfShares = animalProvider.numberOfShares;
+        });
+      }
+
       print('$petId has $numberOfShares shares');
     });
   }
 
   _getCommentsNumber(AnimalProvider animalProvider, String _animalId) async {
     await animalProvider.getNumberOfComments(_animalId).then((value) {
-      setState(() {
-        _numberOfComments = animalProvider.numberOfComments;
-      });
+      if (mounted) {
+        setState(() {
+          _numberOfComments = animalProvider.numberOfComments;
+        });
+      }
+
       print('$petId has $_numberOfComments comments');
     });
   }
-
-  VideoPlayerController? controller;
-
-  bool isVisible = true;
-
-  Widget? videoStatusAnimation;
-
-  @override
-  void initState() {
-    super.initState();
-
-    controller = VideoPlayerController.network(petVideo)
-      ..addListener(() => setState(() {}))
-      ..setLooping(true)
-      ..initialize().then((_) => controller!.play());
-  }
-
-  // @override
-  // void dispose() {
-  //   controller!.dispose();
-  //   super.dispose();
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -311,7 +321,7 @@ class _GroupAnimalPostState extends State<GroupAnimalPost> {
                                 ))
                               ],
                             )
-                          : Container(),
+                          : CircularProgressIndicator(),
                     )),
         ),
         Row(

@@ -39,17 +39,15 @@ class VideoWidgetState extends State<VideoWidget> {
         }
       })
       ..initialize().then((_) {
-        Timer(Duration(milliseconds: 0), () {
-          if (this.mounted) {
-            setState(() {
-              _controller!.play();
-            });
-          }
+        if (this.mounted) {
+          setState(() {
+            _controller!.play();
+          });
+        }
 
-          // if (!mounted) return;
+        // if (!mounted) return;
 
-          // setState(() {});
-        });
+        // setState(() {});
       });
   }
 
