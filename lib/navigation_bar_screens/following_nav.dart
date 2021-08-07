@@ -32,10 +32,8 @@ class _FollowingNavState extends State<FollowingNav> {
 
   _getFavourites(AnimalProvider animalProvider) async {
     await animalProvider.getFavourites().then((value) {
-      setState(() {
-        _favouriteList = animalProvider.favouriteList;
-        print('favourite list length = ${_favouriteList.length}');
-      });
+      _favouriteList = animalProvider.favouriteList;
+      print('favourite list length = ${_favouriteList.length}');
     });
   }
 

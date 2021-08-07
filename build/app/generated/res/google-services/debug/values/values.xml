@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">732881780903-b4biu4bl98uq4oaebodunr21gj6374gq.apps.googleusercontent.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">732881780903</string>
-    <string name="google_api_key" translatable="false">AIzaSyBuY_TCfl4EeOOTsgvDM4-xqgOi3KFtPMI</string>
-    <string name="google_app_id" translatable="false">1:732881780903:android:cc5beedca9ab3521d9db82</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBuY_TCfl4EeOOTsgvDM4-xqgOi3KFtPMI</string>
-    <string name="google_storage_bucket" translatable="false">animal-society-21.appspot.com</string>
-    <string name="project_id" translatable="false">animal-society-21</string>
+    <string name="default_web_client_id" translatable="false">811950814890-jstq3qal8sovldj1crqdqnfqn7pcejle.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">811950814890</string>
+    <string name="google_api_key" translatable="false">AIzaSyDqYa___spQGw2WdSjaqDyL3fef98exZNY</string>
+    <string name="google_app_id" translatable="false">1:811950814890:android:763902c4c0db16e47802d3</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDqYa___spQGw2WdSjaqDyL3fef98exZNY</string>
+    <string name="google_storage_bucket" translatable="false">animal-society-6787b.appspot.com</string>
+    <string name="project_id" translatable="false">animal-society-6787b</string>
 </resources>

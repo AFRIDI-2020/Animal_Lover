@@ -178,9 +178,8 @@ class _AccountNavState extends State<AccountNav> {
               ProfileOption().showOption(context, 'Add animals'),
               ProfileOption().showOption(context, 'Groups'),
               ProfileOption().showOption(context, 'My animals'),
-              ProfileOption().showOption(context, 'Update account'),
-              ProfileOption().showOption(context, 'Reset password'),
-              ProfileOption().showOption(context, 'Logout'),
+              ProfileOption().showOption(context, 'Shared animals'),
+              ProfileOption().showOption(context, 'My followers')
             ],
           ),
         ),

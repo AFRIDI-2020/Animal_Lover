@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pet_lover/provider/animalProvider.dart';
 import 'package:pet_lover/provider/userProvider.dart';
+import 'package:pet_lover/sub_screens/userFollowers.dart';
+import 'package:pet_lover/sub_screens/userFollowing.dart';
 import 'package:pet_lover/sub_screens/users_animals.dart';
 import 'package:pet_lover/sub_screens/users_shared_animals.dart';
 import 'package:provider/provider.dart';
@@ -266,6 +268,13 @@ class _OtherUserProfileState extends State<OtherUserProfile> {
               ),
             ),
             ListTile(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => UserFollowers(
+                            userMobileNo: userMobileNo, username: username)));
+              },
               leading: Icon(
                 FontAwesomeIcons.userFriends,
                 color: Colors.deepOrange,
@@ -287,6 +296,13 @@ class _OtherUserProfileState extends State<OtherUserProfile> {
               ),
             ),
             ListTile(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => UserFollowing(
+                            userMobileNo: userMobileNo, username: username)));
+              },
               leading: Icon(
                 FontAwesomeIcons.users,
                 color: Colors.deepOrange,

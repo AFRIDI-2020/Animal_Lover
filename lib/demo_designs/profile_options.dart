@@ -4,6 +4,7 @@ import 'package:pet_lover/login.dart';
 import 'package:pet_lover/sub_screens/EditProfile.dart';
 import 'package:pet_lover/sub_screens/addAnimal.dart';
 import 'package:pet_lover/sub_screens/groups.dart';
+import 'package:pet_lover/sub_screens/mySharedAnimals.dart';
 import 'package:pet_lover/sub_screens/my_animals.dart';
 import 'package:pet_lover/sub_screens/reset_password.dart';
 
@@ -20,30 +21,40 @@ class ProfileOption {
                 Icons.add_circle_outline_sharp,
                 color: Colors.deepOrange,
               )
-            : title == 'Groups'
+            : title == 'Shared animals'
                 ? Icon(
-                    Icons.group,
+                    Icons.share,
                     color: Colors.deepOrange,
                   )
-                : title == 'My animals'
+                : title == 'My followers'
                     ? Icon(
-                        FontAwesomeIcons.paw,
+                        FontAwesomeIcons.users,
                         color: Colors.deepOrange,
                       )
-                    : title == 'Update account'
+                    : title == 'Groups'
                         ? Icon(
-                            Icons.edit,
+                            Icons.group,
                             color: Colors.deepOrange,
                           )
-                        : title == 'Reset password'
+                        : title == 'My animals'
                             ? Icon(
-                                Icons.vpn_key,
+                                FontAwesomeIcons.paw,
                                 color: Colors.deepOrange,
                               )
-                            : Icon(
-                                Icons.logout,
-                                color: Colors.deepOrange,
-                              ),
+                            : title == 'Update account'
+                                ? Icon(
+                                    Icons.edit,
+                                    color: Colors.deepOrange,
+                                  )
+                                : title == 'Reset password'
+                                    ? Icon(
+                                        Icons.vpn_key,
+                                        color: Colors.deepOrange,
+                                      )
+                                    : Icon(
+                                        Icons.logout,
+                                        color: Colors.deepOrange,
+                                      ),
         trailing: title != 'Logout'
             ? Icon(
                 Icons.chevron_right,
@@ -81,23 +92,32 @@ class ProfileOption {
                                   MaterialPageRoute(
                                       builder: (context) => ResetPassword()))
                             }
-                          : title == 'Update account'
+                          : title == 'Shared animals'
                               // ignore: unnecessary_statements
                               ? {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              EditProfileUser()))
+                                              MySharedAnimals()))
                                 }
-                              // ignore: unnecessary_statements
-                              : {
-                                  Navigator.pushAndRemoveUntil(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => Login()),
-                                      (route) => false)
-                                };
+                              : title == 'Update account'
+                                  // ignore: unnecessary_statements
+                                  ? {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  EditProfileUser()))
+                                    }
+                                  // ignore: unnecessary_statements
+                                  : {
+                                      Navigator.pushAndRemoveUntil(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Login()),
+                                          (route) => false)
+                                    };
         });
   }
 }

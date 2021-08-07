@@ -34,8 +34,6 @@ class _HomeNavState extends State<HomeNav> {
         _lists = animalProvider.animalList;
         _animalLists = _lists;
         print('The animal list first time length = ${_animalLists.length}');
-        print(
-            'function _customInit() running and getting animals on homepage\nthe top animal ${_animalLists[0].petName}\nlast animal it gets ${_animalLists[_animalLists.length - 1].petName}');
       });
     });
 

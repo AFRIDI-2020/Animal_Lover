@@ -17,6 +17,7 @@ class AnimalProvider extends ChangeNotifier {
   int _numberOfMyAnimals = 0;
   List<Animal> _currentUserAnimals = [];
   List<Animal> _otherUserAnimals = [];
+  List<Animal> _userSharedAnimals = [];
   List<Animal> _favouriteList = [];
   int _userAnimalNumber = 0;
   int _userFollowersNumber = 0;
@@ -33,6 +34,7 @@ class AnimalProvider extends ChangeNotifier {
   get otheUserAnimals => _otherUserAnimals;
   get userAnimalNumber => _userAnimalNumber;
   get userFollowersNumber => _userFollowersNumber;
+  get userSharedAnimals => _userSharedAnimals;
 
   Future<List<Animal>> getAnimals(int limit) async {
     print('getAnimals() running');
@@ -72,7 +74,7 @@ class AnimalProvider extends ChangeNotifier {
         _animalList.add(animal);
         notifyListeners();
       });
-      return _animalList;
+      return animalList;
     } catch (error) {
       print('Error: $error');
       return [];
@@ -115,7 +117,7 @@ class AnimalProvider extends ChangeNotifier {
         );
         _animalList.add(animal);
       });
-      return _animalList;
+      return animalList;
     } catch (error) {
       print('Error: $error');
       return [];
@@ -135,6 +137,64 @@ class AnimalProvider extends ChangeNotifier {
     } catch (error) {
       print('Number of followers cannot be showed - $error');
     }
+  }
+
+  Future<void> getUserSharedAnimals(String userMobileNo) async {
+    try {
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(userMobileNo)
+          .collection('shared_animals')
+          .orderBy('date', descending: true)
+          .get()
+          .then((snapshot) {
+        _userSharedAnimals.clear();
+        snapshot.docChanges.forEach((element) async {
+          bool exists = await animalExistsOrNot(element.doc['id']);
+          if (exists == true) {
+            Animal animal = Animal(
+              userProfileImage: element.doc['userProfileImage'],
+              username: element.doc['username'],
+              mobile: element.doc['mobile'],
+              age: element.doc['age'],
+              color: element.doc['color'],
+              date: element.doc['date'],
+              gender: element.doc['gender'],
+              genus: element.doc['genus'],
+              id: element.doc['id'],
+              petName: element.doc['petName'],
+              photo: element.doc['photo'],
+              totalComments: element.doc['totalComments'],
+              totalFollowings: element.doc['totalFollowings'],
+              totalShares: element.doc['totalShares'],
+              video: element.doc['video'],
+            );
+            _userSharedAnimals.add(animal);
+            notifyListeners();
+          }
+        });
+      });
+    } catch (error) {
+      print('getting user shared animals error - $error');
+    }
+  }
+
+  Future<bool> animalExistsOrNot(String animalId) async {
+    bool isExists = false;
+
+    await FirebaseFirestore.instance
+        .collection('Animals')
+        .doc(animalId)
+        .get()
+        .then((snapshot) {
+      if (snapshot.exists) {
+        isExists = true;
+      } else {
+        isExists = false;
+      }
+    });
+
+    return isExists;
   }
 
   Future<void> getNumberOfComments(String _animalId) async {
